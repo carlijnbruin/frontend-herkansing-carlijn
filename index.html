@@ -3,7 +3,6 @@
 <html lang="en" class="no-js">
 
 <head>
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <link href='css/styles.css' rel="stylesheet" type='text/css'
@@ -30,87 +29,83 @@
         <input data-button-one type="submit" value="Volgende">
       </fieldset>
 
-<div data-show-only-first-Fieldset>
-      <fieldset data-fieldset-two>
-      <label for="firstName"> Mijn voornaam is:</label>
-        <input type="text" id="firstName" required />
-        <input data-button-two type="submit" value="Volgende">
-        <input data-button-back type="button" value="Terug">
-      </fieldset>
+      <div data-show-only-first-Fieldset>
+        <fieldset data-fieldset-two>
+          <label for="firstName"> Mijn voornaam is:</label>
+          <input type="text" id="firstName" required />
+          <input data-button-two type="submit" value="Volgende">
+          <input data-button-back type="button" value="Terug">
+        </fieldset>
 
-      <fieldset data-fieldset-three>
-        <label for="birthdate">Mijn geboortedatum is:</label>
-        <input id="bday" type="date" required />
-        <p id="resultBday"></p>
-        <p>Dit is de leeftijd die op uw profiel wordt getoond.</p>
-        <input data-button-three type="submit" value="Volgende">
-        <input data-button-back type="button" value="Terug">
-      </fieldset>
-
-
-      <fieldset data-fieldset-four>
-        <label for="province">Ik woon in de provincie:</label>
-        <select id="province" required>
-          <option value="Drenthe">Drenthe</option>
-          <option value="Flevoland">Flevoland</option>
-          <option value="Friesland">Friesland</option>
-          <option value="Gelderland">Gelderland</option>
-          <option value="Groningen">Groningen</option>
-          <option value="Limburg">Limburg</option>
-          <option value="Noord-Brabant">Noord-Brabant</option>
-          <option value="Noord-Holland">Noord-Holland</option>
-          <option value="Overijssel">Overijssel</option>
-          <option value="Utrecht">Utrecht</option>
-          <option value="Zeeland">Zeeland</option>
-          <option value="Zuid-Holland">Zuid-Holland</option>
-        </select>
-        <input data-button-four type="submit" value="Volgende">
-        <input data-button-back type="button" value="Terug">
-      </fieldset>
+        <fieldset data-fieldset-three>
+          <label for="birthdate">Mijn geboortedatum is:</label>
+          <input id="bday" type="date" required />
+          <p id="resultBday"></p>
+          <p>Dit is de leeftijd die op uw profiel wordt getoond.</p>
+          <input data-button-three type="submit" value="Volgende">
+          <input data-button-back type="button" value="Terug">
+        </fieldset>
 
 
-      <fieldset data-fieldset-five>
-        <legend>Ik ben een...</legend>
-        <div class="gender">
+        <fieldset data-fieldset-four>
+          <label for="province">Ik woon in de provincie:</label>
+          <select id="province" required>
+            <option value="Drenthe">Drenthe</option>
+            <option value="Flevoland">Flevoland</option>
+            <option value="Friesland">Friesland</option>
+            <option value="Gelderland">Gelderland</option>
+            <option value="Groningen">Groningen</option>
+            <option value="Limburg">Limburg</option>
+            <option value="Noord-Brabant">Noord-Brabant</option>
+            <option value="Noord-Holland">Noord-Holland</option>
+            <option value="Overijssel">Overijssel</option>
+            <option value="Utrecht">Utrecht</option>
+            <option value="Zeeland">Zeeland</option>
+            <option value="Zuid-Holland">Zuid-Holland</option>
+          </select>
+          <input data-button-four type="submit" value="Volgende">
+          <input data-button-back type="button" value="Terug">
+        </fieldset>
+
+
+        <fieldset data-fieldset-five>
+          <legend>Ik ben een...</legend>
           <label for="man">Man
-          <input id="man" type="radio" name="gender" value="Man" required /></label>
-
+            <input id="man" type="radio" value="Man" required /></label>
           <label for="woman">Vrouw
-          <input id="woman" type="radio" name="gender" value="Vrouw" required /></label>
-        </div>
-        <input data-button-five type="submit" value="Volgende">
-        <input data-button-back type="button" value="Terug">
-      </fieldset>
+            <input id="woman" type="radio" value="Vrouw" required /></label>
+            <input data-button-five type="submit" value="Volgende">
+            <input data-button-back type="button" value="Terug">
+        </fieldset>
 
 
-      <fieldset data-fieldset-six>
-        <label>Voeg de mooiste foto van jezelf toe!
-          <input type="file" accept="image/*" name="pictures" id="inputProfilePic" required>
-        </label>
-        <img id="output">
-        <input data-button-six type="submit" value="Volgende">
-        <input data-button-back type="button" value="Terug">
-      </fieldset>
+        <fieldset data-fieldset-six>
+          <label>Voeg de mooiste foto van jezelf toe!
+            <input type="file" accept="image/*" id="inputProfilePic" required>
+          </label>
+          <img id="output">
+          <input data-button-six type="submit" value="Volgende">
+          <input data-button-back type="button" value="Terug">
+        </fieldset>
 
-      <fieldset data-fieldset-seven>
-        <label>Wat andere over mij moeten weten:
-          <textarea rows="8" cols="80" placeholder="Ik studeer marketing en hou van golf!" required></textarea>
-        </label>
-        <input data-button-seven type="submit" value="Maak profiel aan">
-        <input data-button-back type="button" value="Terug">
-      </fieldset>
-    </div>
+        <fieldset data-fieldset-seven>
+          <label>Wat andere over mij moeten weten:
+            <textarea rows="8" cols="80" placeholder="Ik studeer marketing en hou van golf!" required></textarea>
+          </label>
+          <input data-button-seven type="submit" value="Maak profiel aan">
+          <input data-button-back type="button" value="Terug">
+        </fieldset>
+      </div>
 
-    <div class="circleSteps">
-      <div class="step"></div>
-      <div class="step"></div>
-      <div class="step"></div>
-      <div class="step"></div>
-      <div class="step"></div>
-      <div class="step"></div>
-      <div class="step"></div>
-    </div>
-
+      <div class="circleSteps">
+        <div class="step" id="stepOne"></div>
+        <div class="step"></div>
+        <div class="step"></div>
+        <div class="step"></div>
+        <div class="step"></div>
+        <div class="step"></div>
+        <div class="step"></div>
+      </div>
     </form>
 
     <h2>Bedankt! Uw profiel is aangemaakt!</h2>

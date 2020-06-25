@@ -24,7 +24,6 @@ const onlyShowFirstFieldset = document.querySelector("[data-show-only-first-Fiel
 onlyShowFirstFieldset.classList.add("hide");
 
 function fieldSet(showFieldset, removeFieldset, showProfileMade){
-  console.log("function is working!");
   onlyShowFirstFieldset.classList.remove("hide");
   for (let i = 0; i < fieldset.length ; i++){
     if (i == showFieldset){
@@ -40,55 +39,50 @@ function fieldSet(showFieldset, removeFieldset, showProfileMade){
       profileMade.classList.remove("hide");
       profileMade.classList.add("show");
     }
-
   }
 }
 
 button1.addEventListener("click", function(){
   fieldSet(1, 0, false);
+  setStep(1);
 });
 
 button2.addEventListener("click", function(){
   fieldSet(2, 1, false);
+  setStep(2);
 });
 
 button3.addEventListener("click", function(){
   fieldSet(3, 2, false);
+  setStep(3);
 });
 
 button4.addEventListener("click", function(){
   fieldSet(4, 3, false);
+  setStep(4);
 });
 
 button5.addEventListener("click", function(){
   fieldSet(5, 4, false);
+  setStep(5);
 });
 
 button6.addEventListener("click", function(){
   fieldSet(6, 5, false);
+  setStep(6);
 });
 
 button7.addEventListener("click", function(){
   fieldSet(7, 6, true);
+  setStep(7);
 });
 
 // chrome://settings/content/javascript javascript aan en uit zetten
 
-var currentTab = 0; // Current tab is set to be the first tab (0)
-
-// If the valid status is true, mark the step as finished and valid:
- if (valid) {
-   document.getElementsByClassName("step")[currentTab].className += " finish";
- }
- return valid; // return the valid status
-}
-
-function fixStepIndicator(n) {
- // This function removes the "active" class of all steps...
- var i, x = document.getElementsByClassName("step");
- for (i = 0; i < x.length; i++) {
-   x[i].className = x[i].className.replace(" active", "");
- }
- //... and adds the "active" class to the current step:
- x[n].className += " active";
+function setStep(step) {
+  for (child in document.body.getElementsByClassName("circleSteps")[0].children) {
+    if (child <= step) {
+      document.body.getElementsByClassName("circleSteps")[0].children[child].style.backgroundColor = "green";
+    }
+  }
 }

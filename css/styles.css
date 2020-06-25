@@ -23,7 +23,7 @@ input:focus{
   outline-color: gold;
 }
 
-input[type=text], input[type=email], input[type=password], input[type=date], input[type=radio], input[type=file], textarea {
+input[type=text]:invalid, input[type=email]:invalid, input[type=password]:invalid, input[type=date]:invalid, input[type=radio]:invalid, input[type=file]:invalid, textarea:invalid {
   border: 1px solid red;
 }
 
@@ -114,7 +114,7 @@ label{
   display: block;
 }
 
-.no-js [data-button-one], .no-js [data-button-two], .no-js [data-button-three], .no-js [data-button-four], .no-js [data-button-five], .no-js [data-button-six]{
+.no-js [data-button-one], .no-js [data-button-two], .no-js [data-button-three], .no-js [data-button-four], .no-js [data-button-five], .no-js [data-button-six], .no-js .circleSteps, .no-js [data-button-back]{
   display: none;
 }
 
@@ -129,15 +129,6 @@ h2{
 input[type=radio]{
   margin-left: -13em;
   margin-top: 1em;
-}
-
-[data-button-back] {
-  padding: 0em;
-  width: 5em;
-}
-
-fieldset:invalid input[type="submit"] {
-  display: none;
 }
 
 .step {
@@ -155,10 +146,6 @@ div.circleSteps {
   text-align: center;
 }
 
-.step.active {
-  opacity: 1;
-}
-
-.step.finish {
-  background-color: #4CAF50;
+#stepOne {
+  background-color: green;
 }
