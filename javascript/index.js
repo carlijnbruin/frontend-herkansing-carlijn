@@ -1,3 +1,5 @@
+document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+
 const fieldset = [document.querySelector("[data-fieldset-one]"),
                   document.querySelector("[data-fieldset-two]"),
                   document.querySelector("[data-fieldset-three]"),
@@ -70,4 +72,12 @@ button7.addEventListener("click", function(){
   fieldSet(7, 6, true);
 });
 
-// chrome://settings/content/javascript javascript aan en uit zetten
+// bron: https://www.webtrickshome.com/faq/how-to-display-uploaded-image-in-html-using-javascript
+const profilePic = document.getElementById("inputProfilePic");
+
+if(profilePic){																					// indien profilePic op die specifieke html page staat, voer dan de functie uit.
+	profilePic.addEventListener("change", function(event){ // wanneer een pagina laadt, heet het een event. Event 'change' wordt uitgevoerd in het geval dat de user iets veranderd in de input type.
+		const image = document.getElementById("output");    // de img tag waar de geuploade afbeelding in gepreviewd wordt.
+		image.src = URL.createObjectURL(event.target.files[0]);
+	})
+}

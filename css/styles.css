@@ -78,7 +78,7 @@ legend{
 }
 
 label{
-  font-sie: 1.5em;
+  font-size: 1.5em;
   font-weight: bold;
 }
 
@@ -88,4 +88,16 @@ label{
 
 .show{
   display: block;
+}
+
+.no-js [data-button-one], .no-js [data-button-two], .no-js [data-button-three], .no-js [data-button-four], .no-js [data-button-five], .no-js [data-button-six]{
+  display: none;
+}
+
+#output{
+  max-width: 21em;
+}
+
+h2{
+  text-align: center;
 }
