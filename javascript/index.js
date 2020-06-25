@@ -72,12 +72,23 @@ button7.addEventListener("click", function(){
   fieldSet(7, 6, true);
 });
 
-// bron: https://www.webtrickshome.com/faq/how-to-display-uploaded-image-in-html-using-javascript
-const profilePic = document.getElementById("inputProfilePic");
+// chrome://settings/content/javascript javascript aan en uit zetten
 
-if(profilePic){																					// indien profilePic op die specifieke html page staat, voer dan de functie uit.
-	profilePic.addEventListener("change", function(event){ // wanneer een pagina laadt, heet het een event. Event 'change' wordt uitgevoerd in het geval dat de user iets veranderd in de input type.
-		const image = document.getElementById("output");    // de img tag waar de geuploade afbeelding in gepreviewd wordt.
-		image.src = URL.createObjectURL(event.target.files[0]);
-	})
+var currentTab = 0; // Current tab is set to be the first tab (0)
+
+// If the valid status is true, mark the step as finished and valid:
+ if (valid) {
+   document.getElementsByClassName("step")[currentTab].className += " finish";
+ }
+ return valid; // return the valid status
+}
+
+function fixStepIndicator(n) {
+ // This function removes the "active" class of all steps...
+ var i, x = document.getElementsByClassName("step");
+ for (i = 0; i < x.length; i++) {
+   x[i].className = x[i].className.replace(" active", "");
+ }
+ //... and adds the "active" class to the current step:
+ x[n].className += " active";
 }

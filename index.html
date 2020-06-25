@@ -26,14 +26,16 @@
 
         <label for="password">Wachtwoord*</label>
         <input pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" id="password" type="password" required>
-        <input data-button-one type="button" name="" value="Volgende">
+        <p>* Min. 6 karakters, waarvan 1 hoofdletter en een cijfer.</p>
+        <input data-button-one type="submit" value="Volgende">
       </fieldset>
 
 <div data-show-only-first-Fieldset>
       <fieldset data-fieldset-two>
       <label for="firstName"> Mijn voornaam is:</label>
         <input type="text" id="firstName" required />
-        <input data-button-two type="button" name="" value="Volgende">
+        <input data-button-two type="submit" value="Volgende">
+        <input data-button-back type="button" value="Terug">
       </fieldset>
 
       <fieldset data-fieldset-three>
@@ -41,7 +43,8 @@
         <input id="bday" type="date" required />
         <p id="resultBday"></p>
         <p>Dit is de leeftijd die op uw profiel wordt getoond.</p>
-        <input data-button-three type="button" name="" value="Volgende">
+        <input data-button-three type="submit" value="Volgende">
+        <input data-button-back type="button" value="Terug">
       </fieldset>
 
 
@@ -61,20 +64,22 @@
           <option value="Zeeland">Zeeland</option>
           <option value="Zuid-Holland">Zuid-Holland</option>
         </select>
-        <input data-button-four type="button" name="" value="Volgende">
+        <input data-button-four type="submit" value="Volgende">
+        <input data-button-back type="button" value="Terug">
       </fieldset>
 
 
       <fieldset data-fieldset-five>
         <legend>Ik ben een...</legend>
         <div class="gender">
-          <input id="man" type="radio" value="Man" required />
-          <label for="man">Man</label>
+          <label for="man">Man
+          <input id="man" type="radio" name="gender" value="Man" required /></label>
 
-          <input id="woman" type="radio" value="Vrouw" required />
-          <label for="woman">Vrouw</label>
+          <label for="woman">Vrouw
+          <input id="woman" type="radio" name="gender" value="Vrouw" required /></label>
         </div>
-        <input data-button-five type="button" name="" value="Volgende">
+        <input data-button-five type="submit" value="Volgende">
+        <input data-button-back type="button" value="Terug">
       </fieldset>
 
 
@@ -83,16 +88,29 @@
           <input type="file" accept="image/*" name="pictures" id="inputProfilePic" required>
         </label>
         <img id="output">
-        <input data-button-six type="button" name="" value="Volgende">
+        <input data-button-six type="submit" value="Volgende">
+        <input data-button-back type="button" value="Terug">
       </fieldset>
 
       <fieldset data-fieldset-seven>
         <label>Wat andere over mij moeten weten:
           <textarea rows="8" cols="80" placeholder="Ik studeer marketing en hou van golf!" required></textarea>
         </label>
-        <input data-button-seven type="button" name="" value="Maak profiel aan">
+        <input data-button-seven type="submit" value="Maak profiel aan">
+        <input data-button-back type="button" value="Terug">
       </fieldset>
     </div>
+
+    <div class="circleSteps">
+      <div class="step"></div>
+      <div class="step"></div>
+      <div class="step"></div>
+      <div class="step"></div>
+      <div class="step"></div>
+      <div class="step"></div>
+      <div class="step"></div>
+    </div>
+
     </form>
 
     <h2>Bedankt! Uw profiel is aangemaakt!</h2>
