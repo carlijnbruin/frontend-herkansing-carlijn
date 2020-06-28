@@ -9,6 +9,7 @@ const fieldset = [document.querySelector("[data-fieldset-one]"),
                   document.querySelector("[data-fieldset-seven]"),
                 ];
 
+let form = document.querySelector('form');
 const buttonNext = document.querySelector("[data-button-next]");
 const buttonBack = document.querySelector("[data-button-back]");
 buttonBack.classList.remove("show");
@@ -40,7 +41,30 @@ function fieldSet(showFieldset, removeFieldset, showProfileMade){
   }
 }
 
+// function validity() {
+//   // var checkVal = fieldset[currentF].reportValidity();
+//   // console.log(checkVal);
+//   form.reportValidity();
+//   }
+//
+//   var valid = form.HTMLFormElement.reportValidity()
+//
+//   if (valid) {
+//   naar volgende fieldset
+//   }
+
+
+function validity() {
+  var currentField = fieldset[currentF];
+  var inputs = currentField.querySelectorAll("input");
+  inputs.forEach(function(input) {
+    input.reportValidity();
+  });
+}
+
 buttonNext.addEventListener("click", function(){
+  console.log(validity());
+  // if(valid){}
   fieldSet(currentF, currentF - 1, false);
   setStep(currentF);
   currentF ++;
@@ -75,11 +99,14 @@ if(profilePic){																					// indien profilePic op die specifieke html 
 
 function setStep(step) {
   for (child in document.body.getElementsByClassName("circleSteps")[0].children) {
-    console.log(child);
     let nextStepGreen = document.body.getElementsByClassName("circleSteps")[0].children[child];
-    if (child <= step) {
-      nextStepGreen.classList.add("stepGreen");
-    }   
+    if (nextStepGreen.classList) {
+      if (child <= step) {
+        nextStepGreen.classList.add("stepGreen")
+      } else {
+        nextStepGreen.classList.remove("stepGreen")
+      }
+    }
   }
 }
 
