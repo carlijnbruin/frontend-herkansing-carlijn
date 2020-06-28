@@ -58,8 +58,11 @@ function validity() {
   var currentField = fieldset[currentF];
   var inputs = currentField.querySelectorAll("input");
   inputs.forEach(function(input) {
-    input.reportValidity();
+    if(input.reportValidity() == false) {
+      return false;
+    }
   });
+  return true;
 }
 
 buttonNext.addEventListener("click", function(){
