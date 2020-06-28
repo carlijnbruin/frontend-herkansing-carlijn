@@ -31,7 +31,7 @@ input[type=text]:valid, input[type=email]:valid, input[type=password]:valid, inp
   border: 3px solid green;
 }
 
-input[type=submit]{
+input[type=submit], #volgende{
   display: block;
   padding: 1em 2em 1em 2em;
   border-radius: 40px;
@@ -124,6 +124,7 @@ label{
 
 h2{
   text-align: center;
+  display: none;
 }
 
 input[type=radio]{
