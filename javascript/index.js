@@ -52,7 +52,7 @@ function validity() {                                             //valideren va
 }
 
 
-// bron: https://www.webtrickshome.com/faq/how-to-display-uploaded-image-in-html-using-javascript
+// bron: How To Display Uploaded Image In Html Using Javascript ? (z.d.). Geraadpleegd op 1 juni 2020, van https://www.webtrickshome.com/faq/how-to-display-uploaded-image-in-html-using-javascript
 const profilePic = document.getElementById("inputProfilePic");
 
 if(profilePic){																					          // indien profilePic op die specifieke fieldset staat, voer dan de functie uit.
@@ -66,7 +66,7 @@ if(profilePic){																					          // indien profilePic op die specif
 // bron: hulp van Sjors Wijsman (blok Tech student)
 function cicleSteps(step) {                                       // bolletjes onderin, waar je bent in het formulier. Door de parameter die je op rij 51 en 66 meegeeft wanneer je op de next of back button klikt, weet hij waar je bent in het form (welke fieldset)
   for (child in document.body.getElementsByClassName("circleSteps")[0].children) { // loopt door alle children, 1 voor 1, van circleSteps heen en voert onderstaande uit. Je wilt alleen de eerste waarde die uit de chils komt pakken, vandaag [0] (denk aan de console.log)
-    let nextStepGreen = document.body.getElementsByClassName("circleSteps")[0].children[child]; // maakt van de children een array en zet in variabele
+    let nextStepGreen = document.body.getElementsByClassName("circleSteps")[0].children[child];
     if (nextStepGreen.classList) {
       if (child <= step) {                                        // indien bolletje kleiner is of gelijk is aan waar je bent, voer onderstaande uit. Zo niet? remove groene bolletje.
         nextStepGreen.classList.add("stepGreen")                  // wanneer de childs in de circleSteps kleiner of gelijk zijn aan de step, voeg groen bolletje toe
