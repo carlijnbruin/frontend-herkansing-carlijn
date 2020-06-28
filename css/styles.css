@@ -136,7 +136,7 @@ input[type=radio]{
   height: 15px;
   width: 15px;
   margin: 0 2px;
-  background-color: #bbbbbb;
+  background-color: lightgrey;
   border: none;
   border-radius: 50%;
   display: inline-block;
@@ -149,4 +149,12 @@ div.circleSteps {
 
 #stepOne {
   background-color: green;
+}
+
+.stepGreen {
+  background-color: green;
+}
+
+.stepGrey {
+  background-color: lightgrey;
 }

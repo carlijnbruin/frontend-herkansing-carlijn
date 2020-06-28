@@ -11,6 +11,8 @@ const fieldset = [document.querySelector("[data-fieldset-one]"),
 
 const buttonNext = document.querySelector("[data-button-next]");
 const buttonBack = document.querySelector("[data-button-back]");
+buttonBack.classList.remove("show");
+buttonBack.classList.add("hide");
 let currentF = 1;
 
 const profileMade = document.querySelector("h2");
@@ -42,13 +44,21 @@ buttonNext.addEventListener("click", function(){
   fieldSet(currentF, currentF - 1, false);
   setStep(currentF);
   currentF ++;
+  if (currentF == 2){
+    buttonBack.classList.remove("hide");
+    buttonBack.classList.add("show");
+  }
 });
 
 
 buttonBack.addEventListener("click", function(){
   fieldSet(currentF - 2, currentF - 1, false);
-  setStep(currentF);
+  setStep(currentF - 2);
   currentF --;
+  if (currentF == 1){
+    buttonBack.classList.remove("show");
+    buttonBack.classList.add("hide");
+  }
 });
 
 
@@ -65,9 +75,11 @@ if(profilePic){																					// indien profilePic op die specifieke html 
 
 function setStep(step) {
   for (child in document.body.getElementsByClassName("circleSteps")[0].children) {
+    console.log(child);
+    let nextStepGreen = document.body.getElementsByClassName("circleSteps")[0].children[child];
     if (child <= step) {
-      document.body.getElementsByClassName("circleSteps")[0].children[child].style.backgroundColor = "green";
-    }
+      nextStepGreen.classList.add("stepGreen");
+    }   
   }
 }
 
