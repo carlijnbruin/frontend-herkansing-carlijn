@@ -12,7 +12,7 @@ body{
   min-height: 100vh;
 }
 
-.allLogos{
+.logo{
   height: auto;
   display: block;
   margin: 1em auto -4em 3em;
@@ -23,7 +23,7 @@ input:focus{
   outline-color: gold;
 }
 
-input[type=text]:invalid, input[type=email]:invalid, input[type=password]:invalid, input[type=date]:invalid, input[type=radio]:invalid, input[type=file]:invalid, textarea:invalid {
+input[type=text]:invalid, input[type=email]:invalid, input[type=password]:invalid, input[type=date]:invalid, input[type=radio]:invalid, input[type=file]:invalid, textarea:invalid{
   border: 1px solid red;
 }
 
@@ -31,19 +31,55 @@ input[type=text]:valid, input[type=email]:valid, input[type=password]:valid, inp
   border: 3px solid green;
 }
 
-input[type=submit], #volgende{
+.buttons{
+  display: flex;
+}
+
+[data-button-next]{
   display: block;
-  padding: 1em 2em 1em 2em;
-  border-radius: 40px;
-  margin: 1em auto auto auto;
-  width: 100%;
+  padding: 1em 1em 1em 1em;
+  border-radius: 10px;
+  margin: -1em auto auto auto;
+  width: 48%;
   font-size: 1.3em;
   border-color: #EB5014;
   box-shadow: -1px 6px 14px rgba(0,0,0,0.3);
   background-color: #EB5014;
   color: white;
-  text-align: center;
   text-decoration: none;
+}
+
+input[type=submit]{
+  display: block;
+  padding: 1em 0em 1em 0em;
+  border-radius: 10px;
+  margin: 0em auto auto auto;
+  width: 48%;
+  font-size: 1.3em;
+  border-color: #EB5014;
+  box-shadow: -1px 6px 14px rgba(0,0,0,0.3);
+  background-color: #EB5014;
+  color: white;
+  text-decoration: none;
+}
+
+[data-button-back]{
+  display: block;
+  padding: 1em 1em 1em 1em;
+  border-radius: 10px;
+  margin: -1em auto auto auto;
+  width: 48%;
+  font-size: 1.3em;
+  border-color: #EB5014;
+  box-shadow: -1px 6px 14px rgba(0,0,0,0.3);
+  background-color: #EB5014;
+  color: white;
+  text-decoration: none;
+}
+
+[data-button-back]:hover, input[type=submit]:hover, [data-button-next]:hover{
+  background-color: black;
+  border-color: black;
 }
 
 input{
@@ -114,7 +150,7 @@ label{
   display: block;
 }
 
-.no-js [data-button-one], .no-js [data-button-two], .no-js [data-button-three], .no-js [data-button-four], .no-js [data-button-five], .no-js [data-button-six], .no-js .circleSteps, .no-js [data-button-back]{
+.no-js [data-button-one], .no-js [data-button-two], .no-js [data-button-three], .no-js [data-button-four], .no-js [data-button-five], .no-js [data-button-six], .no-js .circleSteps, .no-js [data-button-back], .no-js [data-button-next]{
   display: none;
 }
 
@@ -128,11 +164,19 @@ h2{
 }
 
 input[type=radio]{
-  margin-left: -13em;
+  margin-left: 0em;
   margin-top: 1em;
 }
 
-.step {
+label[for=man]{
+  margin-left: 1em;
+}
+
+label[for=woman]{
+  margin-left: 3em;
+}
+
+.step{
   height: 15px;
   width: 15px;
   margin: 0 2px;
@@ -143,18 +187,23 @@ input[type=radio]{
   opacity: 0.5;
 }
 
-div.circleSteps {
+div.circleSteps{
+  margin-top: 3em;
   text-align: center;
 }
 
-#stepOne {
+#stepOne{
   background-color: green;
 }
 
-.stepGreen {
+.stepGreen{
   background-color: green;
 }
 
-.stepGrey {
+.stepGrey{
   background-color: lightgrey;
+}
+
+.genderRadio{
+  display: flex;
 }

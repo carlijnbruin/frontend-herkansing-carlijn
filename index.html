@@ -11,9 +11,9 @@
 </head>
 
   <body>
-    <img src="images/logo-datingssite.png"  class="allLogos" alt="Matchie logo">
+    <img src="images/logo-datingssite.png"  class="logo" alt="Matchie logo">
 
-    <form name="signUpForm">
+    <form action="" method="get" name="signUpForm">
       <fieldset data-fieldset-one name="fieldset">
         <legend>Meld je aan!</legend>
 
@@ -37,7 +37,7 @@
 
         <fieldset data-fieldset-three name="fieldset">
           <label for="birthdate">Mijn geboortedatum is:</label>
-          <input id="bday" type="date" name="dateofbirth" required />
+          <input id="bday" type="date" name="dateofbirth" max="28-06-2002" required />
           <p id="resultBday"></p>
           <p>Dit is de leeftijd die op uw profiel wordt getoond.</p>
         </fieldset>
@@ -64,10 +64,12 @@
 
         <fieldset data-fieldset-five name="fieldset">
           <legend>Ik ben een...</legend>
+          <div class="genderRadio">
           <label for="man">Man
-            <input id="man" type="radio" value="Man" name="radioMan" required /></label>
+            <input id="man" type="radio" value="Man" name="gender" required /></label>
           <label for="woman">Vrouw
-            <input id="woman" type="radio" value="Vrouw" name="radioWoman" required /></label>
+            <input id="woman" type="radio" value="Vrouw" name="gender" required /></label>
+          </div>
         </fieldset>
 
 
@@ -80,14 +82,16 @@
 
         <fieldset data-fieldset-seven name="fieldset">
           <label>Wat andere over mij moeten weten:
-            <textarea rows="8" cols="80" placeholder="Ik studeer marketing en hou van golf!" name="aboutMe" required></textarea>
+            <textarea rows="8" cols="80" placeholder="Ik studeer marketing en hou van golf!" name="aboutMe"></textarea>
           </label>
-          <input type="submit" id="submitButton" value="Profiel aanmaken">
+          <input type="submit" id="submitButton" class="buttons" value="Profiel aanmaken">
         </fieldset>
       </div>
 
-      <button type="button" data-button-back>Terug</button>
-      <button type="button" data-button-next>Volgende</button>
+      <div class="buttons">
+        <button type="button" data-button-back>Terug</button>
+        <button type="button" data-button-next>Volgende</button>
+      </div>
 
       <div class="circleSteps">
         <div class="step" id="stepOne"></div>
