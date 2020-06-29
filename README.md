@@ -15,4 +15,4 @@ Wanneer ik opzoek ga naar een date, wil ik mij kunnen registreren op een datings
 Dit is de repository die ik heb gemaakt voor de Frontend herkansing, wat onderdeel is van blok Tech. Hiervoor heb ik een (kleine) feature uitgewerkt.
 Het belangrijkste is dat je weet wat Progressive Enhancement is en hoe je het toe kan passen.
 
-Bekijk hier mijn Github page: 
+Bekijk hier mijn Github page: https://carlijnbruin.github.io/frontend-herkansing-carlijn/
